@@ -8,12 +8,12 @@ Równania stanu:
 ```
 Macierz A: 
 ```math 
-\begin{align*} A = \begin{bmatrix} 1 & 0 & -v_{\theta} \Delta t \sin(\theta) & \Delta t \cos(\theta) & 0 & 0 & 0 \ 0 & 1 & v_{\theta} \Delta t \cos(\theta) & \Delta t \sin(\theta) & 0 & 0 & 0 \ 0 & 0 & 1 & 0 & 0 & \Delta t & 0 \ 0 & 0 & 0 & 1 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 & 1 & 0 & 0 \ 0 & 0 & 0 & 0 & 0 & 1 & 0 \ 0 & 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix} \end{align*}
+\begin{align*} A = \begin{bmatrix} 1 & 0 & -v_{\theta} \Delta t \sin(\theta) & \Delta t \cos(\theta) & 0 & 0 & 0 \\ 0 & 1 & v_{\theta} \Delta t \cos(\theta) & \Delta t \sin(\theta) & 0 & 0 & 0 \\ 0 & 0 & 1 & 0 & 0 & \Delta t & 0 \\ 0 & 0 & 0 & 1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & 1 \end{bmatrix} \end{align*}
 ```
 
 Macierz B: 
 ```math
-\begin{align*} B = \begin{bmatrix} \frac{1}{2} \Delta t^2 \cos(\theta) & \frac{1}{2} \Delta t^2 \cos(\theta) \ \frac{1}{2} \Delta t^2 \sin(\theta) & \frac{1}{2} \Delta t^2 \sin(\theta) \ 0 & 0 \ \Delta t \cos(\theta) & \Delta t \cos(\theta) \ \Delta t \sin(\theta) & \Delta t \sin(\theta) \ 0 & 0 \ 0 & 0 \end{bmatrix} \end{align*}
+\begin{align*} B = \begin{bmatrix} \frac{1}{2} \Delta t^2 \cos(\theta) & \frac{1}{2} \Delta t^2 \cos(\theta) \\ \frac{1}{2} \Delta t^2 \sin(\theta) & \frac{1}{2} \Delta t^2 \sin(\theta) \\ 0 & 0 \\ \Delta t \cos(\theta) & \Delta t \cos(\theta) \\ \Delta t \sin(\theta) & \Delta t \sin(\theta) \\ 0 & 0 \\ 0 & 0 \end{bmatrix} \end{align*}
 ```
 Wektor szumu procesowego: 
 ```math
@@ -22,7 +22,7 @@ Wektor szumu procesowego:
 
 Macierz szumu procesowego:
 ```math
-\begin{align*} Q = \begin{bmatrix} \sigma_x^2 & 0 & 0 & 0 & 0 & 0 & 0 \ 0 & \sigma_y^2 & 0 & 0 & 0 & 0 & 0 \ 0 & 0 & \sigma_{\theta}^2 & 0 & 0 & 0 & 0 \ 0 & 0 & 0 & \sigma_{v_x}^2 & 0 & 0 & 0 \ 0 & 0 & 0 & 0 & \sigma_{v_y}^2 & 0 & 0 \ 0 & 0 & 0 & 0 & 0 & \sigma_{v_{\theta}}^2 & 0 \ 0 & 0 & 0 & 0 & 0 & 0 & \sigma_{gyro}^2 \end{bmatrix} \end{align*}
+\begin{align*} Q = \begin{bmatrix} \sigma_x^2 & 0 & 0 & 0 & 0 & 0 & 0 \\ 0 & \sigma_y^2 & 0 & 0 & 0 & 0 & 0 \\ 0 & 0 & \sigma_{\theta}^2 & 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & \sigma_{v_x}^2 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 & \sigma_{v_y}^2 & 0 & 0 \\ 0 & 0 & 0 & 0 & 0 & \sigma_{v_{\theta}}^2 & 0 \\ 0 & 0 & 0 & 0 & 0 & 0 & \sigma_{gyro}^2 \end{bmatrix} \end{align*}
 ```
 Równania pomiarowe: 
 ```math
